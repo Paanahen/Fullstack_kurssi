@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "scripts": {
+  "scripts": {"start": "node index.js",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
@@ -27,5 +27,9 @@
     "globals": "^15.14.0",
     "json-server": "^1.0.0-beta.3",
     "vite": "^6.1.0"
-  }
+  },
+  "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
+  "main": "eslint.config.js",
+  "author": "Henri Paananen",
+  "license": "MIT"
 }
