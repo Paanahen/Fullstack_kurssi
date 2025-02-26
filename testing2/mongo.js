@@ -12,7 +12,11 @@ const url = `mongodb+srv://hpa:${password}@fshpa.el4vp.mongodb.net/noteApp?retry
 mongoose.set('strictQuery', false)
 mongoose.connect(url).then(() => {
 const noteSchema = new mongoose.Schema({
-  content: String,
+  content: {
+    type: String,
+    minlength: 5,
+    required: true
+  },
   important: Boolean,
   })
    
