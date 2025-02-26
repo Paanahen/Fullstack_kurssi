@@ -6,12 +6,16 @@
   "scripts": {
     "start": "node index.js",
     "dev": "node --watch index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:ui": "rmdir /s /q dist && cd C:\\Users\\HenriPaananen\\Fullstack_kurssi\\testing && npm run build && xcopy dist C:\\Users\\HenriPaananen\\Fullstack_kurssi\\testing2 /s /e /h /i",
+    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push"
   },
   "author": "Matti Luukkainen",
   "license": "MIT",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.21.2"
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^8.10.1"
   }
 }
